@@ -240,7 +240,7 @@ class DeliverySchedule {
 
             const getData = async () => {
                 // const dbCollection = collection(this.db, "Schedule");
-
+                console.log(id)
                 const docRef = doc(this.db, "Schedule", id);
                 const docSnap = await getDoc(docRef);
 

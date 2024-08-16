@@ -47,10 +47,10 @@ function renderListOfDeliveries(items) {
 
         items.map((item, index) => {
 
-            const navigateBtn = createButton("Navigate", item.id);
+            const navigateBtn = createButton("Navigate", `${item.id}-${index}`);
 
             navigateBtn.className = "navigate-btn"
-            navigateBtn.innerHTML = "<i class='fa fa-location-arrow' aria-hidden='true'></i>";
+            navigateBtn.innerHTML = `<i class='fa fa-location-arrow' aria-hidden='true' id=${item.id}></i>`;
 
             parentElement.innerHTML += `
                 <div class="item-card-container">
@@ -104,8 +104,9 @@ function renderListOfDeliveries(items) {
 
 // Opens google maps and show routes
 async function navigateRoute(event) {
-    // console.log(event)
+    console.log(event.target)
     const routeId = event.target.id;
+    console.log(routeId)
     try {
         const { address1, city, province, postalcode } = await scheduleDB.getDeliveryByID(routeId);
         const { latitude, longitude } = await handleGeolocation();
