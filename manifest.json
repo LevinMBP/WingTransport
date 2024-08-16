@@ -1,0 +1,39 @@
+{
+    "name": "Wing Transport App",
+    "short_name": "Wing Transport",
+    "description": "An app that takes care of your delivery needs.",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "theme_color": "#eee",
+    "background_color": "#fff",
+    "orientation": "any",
+    "screenshots": [
+        {
+            "src": "/assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "App Logo"
+        },
+        {
+            "src": "/assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "App Logo"
+        }
+    ],
+    "icons": [
+        {
+            "src": "/assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/logo.png",
+            "sizes": "233x199",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wing Transport</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/deliveryRuns.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/66041f2ae7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="logo" src="/assets/images/logo.png" />
+        <h1>Wing Transport</h1>
+    </header>
+
+    <main>
+        <div class="form-wrapper">
+            <div class="section-header-main">
+                <select class="form-input main-page-selector" id="pageSelectorRun">
+                    <option value="schedule">Schedule a Delivery</option>
+                    <option value="schedule" selected>Delivery Runs</option>
+                </select>
+            </div>
+
+            <div class="openruns-info-wrapper">
+                <div class="section-header">
+                    <h3>Open Runs</h3>
+                </div>
+                <div class="run-list-wrapper" id="listOfRuns">
+
+                </div>
+            </div>
+
+            <div class="outdeliver-info-wrapper">
+                <div class="section-header">
+                    <h3>Out Deliver</h3>
+                </div>
+                <div class="outdeliver-list-wrapper" id="listOfOutDeliver">
+
+                </div>
+            </div>
+
+            <div class="closedruns-info-wrapper">
+                <div class="section-header">
+                    <h3>Finished Runs</h3>
+                </div>
+                <div class="outdeliver-list-wrapper" id="listOfOutDeliver">
+
+                </div>
+            </div>
+
+
+
+            <!-- <div class="form-content form-content-button">
+                <button type="submit" class="form-button" id="submitBtn">Submit</button>
+            </div> -->
+
+        </div>
+    </main>
+    <script src="/js/deliveryRuns.js" type="module"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wing Transport</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="logo" src="/assets/images/logo.png" />
+        <h1>Wing Transport</h1>
+    </header>
+
+    <main>
+        <div class="form-wrapper">
+            <div class="section-header-main">
+                <select class="form-input main-page-selector" id="pageSelectorMain">
+                    <option value="schedule" selected>Schedule a Delivery</option>
+                    <option value="runs">Delivery Runs</option>
+                </select>
+            </div>
+            <div class="response-msg error-message" id="errMsg">
+                <h6>Please fill out required fields</h6>
+            </div>
+            <div class="response-msg success-message" id="succMsg">
+                <h6>Track successfully added</h6>
+            </div>
+            <form id="scheduleForm">
+                <div class="pickup-info-wrapper">
+                    <div class="section-header">
+                        <h3>Pickup Information</h3>
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="pickup_date">Pickup Date:<span
+                                class="required">*</span></label>
+                        <input type="date" class="form-input" name="pickup_date" id="pickup_date" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="company_name">Company or Name:<span
+                                class="required">*</span></label>
+                        <input type="text" class="form-input" name="company_name" id="company_name" placeholder="" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="contact_person">Contact Person:</label>
+                        <input type="text" class="form-input" name="contact_person" id="contact_person"
+                            placeholder="" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="address1">Address Line 1:<span
+                                class="required">*</span></label>
+                        <input type="text" class="form-input" name="address1" id="address1"
+                            placeholder="Street Address" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="address2">Address Line 2:</label>
+                        <input type="text" class="form-input" name="address2" id="address2"
+                            placeholder="Apartment, Unit, Suite" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="address3">City, Provice, Country:</label>
+                        <input type="text" class="form-input" name="address3" id="address3" value="London, ON, Canada"
+                            disabled readonly />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="postalcode">Postal Code:<span
+                                class="required">*</span></label>
+                        <input type="text" class="form-input" name="postalcode" id="postalcode" placeholder="N5N N5N"
+                            autocomplete="off" />
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="contact_no">Phone Number:<span
+                                class="required">*</span></label>
+                        <input type="text" class="form-input" name="contact_no" id="contact_no" placeholder="" />
+                    </div>
+                </div>
+                <div class="package-info-wrapper">
+                    <div class="section-header">
+                        <h3>Package Information</h3>
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="package_size">Size of Package:<span
+                                class="required">*</span></label>
+                        <select class="form-input" name="package_size" id="package_size">
+                            <option value="">- Select -</option>
+                            <option value="32">Within 40x40x50 cm</option>
+                            <option value="32">Within 150x80x80 cm</option>
+                            <option value="32">Within 175x100x85 cm</option>
+                        </select>
+                    </div>
+                    <div class="form-content">
+                        <label class="form-label label-err" for="package_weight">Weight of Package Less than 20kg:<span
+                                class="required">*</span></label>
+                        <select class="form-input" name="package_weight" id="package_weight">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-content form-content-button">
+                    <button type="submit" class="form-button" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="/js/scheduleDelivery.js" type="module"></script>
+</body>
+
+
+</html>
